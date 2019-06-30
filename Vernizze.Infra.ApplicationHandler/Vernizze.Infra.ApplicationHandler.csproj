@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Vernizze.Infra.Crosscutting\Vernizze.Infra.Crosscutting\Vernizze.Infra.Crosscutting.csproj" />
+    <PackageReference Include="Vernizze.Infra.Crosscutting" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
