@@ -1,0 +1,32 @@
+{
+  "configs": [
+    {
+      "object_name_origin": "OriginObject01",
+      "object_name_destiny": "DestinyObject01",
+      "relations": [
+        {
+          "atribute_origin": "attribute_objorig01_origin_01",
+          "atribute_destiny": "attribute_objdestg01_destiny_01"
+        },
+        {
+          "atribute_origin": "attribute_objorig01_origin_02",
+          "atribute_destiny": "attribute_objdestg01_destiny_02"
+        }
+      ]
+    },
+    {
+      "object_name_origin": "OriginObject02",
+      "object_name_destiny": "DestinyObject02",
+      "relations": [
+        {
+          "atribute_origin": "attribute_objorig02_origin_01",
+          "atribute_destiny": "attribute_objdestg02_destiny_01"
+        },
+        {
+          "atribute_origin": "attribute_objorig02_origin_02",
+          "atribute_destiny": "attribute_objdestg02_destiny_02"
+        }
+      ]
+    }
+  ]
+}

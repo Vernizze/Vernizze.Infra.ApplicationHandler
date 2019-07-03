@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="4.1.0" />
     <PackageReference Include="Vernizze.Infra.Crosscutting" Version="1.0.0" />
   </ItemGroup>
 
