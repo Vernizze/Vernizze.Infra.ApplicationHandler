@@ -13,10 +13,10 @@ namespace Vernizze.Infra.ApplicationHandler.ObjectMapping
     {
         static Mapper()
         {
-            new Mapper().Init();
+            new Mapper().InitConfigs();
         }
 
-        private void Init()
+        private void InitConfigs()
         {
             var mapping_configs = ReadConfigs();
 
@@ -40,6 +40,8 @@ namespace Vernizze.Infra.ApplicationHandler.ObjectMapping
                 });
             }
         }
+
+        public static void Init() { }
 
         public void Config<TOrigin, TDestiny>(object[] parameters)
         {
