@@ -11,11 +11,18 @@ namespace Vernizze.Infra.ApplicationHandler.ObjectMapping
 {
     public class Mapper
     {
+        #region Constructors
+
         static Mapper()
         {
             new Mapper().InitConfigs();
         }
 
+        #endregion
+
+        #region Methods
+
+        //Provates
         private void InitConfigs()
         {
             var mapping_configs = ReadConfigs();
@@ -41,6 +48,15 @@ namespace Vernizze.Infra.ApplicationHandler.ObjectMapping
             }
         }
 
+        private static ObjectMappingConfigs ReadConfigs()
+        {
+            var configs_string_content = FilesAndFolders.GetFileContent("object_mapping.json");
+
+            return JsonConvert.DeserializeObject<ObjectMappingConfigs>(configs_string_content); ;
+        }
+
+
+        //Publics
         public static void Init() { }
 
         public void Config<TOrigin, TDestiny>(object[] parameters)
@@ -61,11 +77,6 @@ namespace Vernizze.Infra.ApplicationHandler.ObjectMapping
             return origin.Adapt<TDestiny>();
         }
 
-        private static ObjectMappingConfigs ReadConfigs()
-        {
-            var configs_string_content = FilesAndFolders.GetFileContent("object_mapping.json");
-
-            return JsonConvert.DeserializeObject<ObjectMappingConfigs>(configs_string_content); ;
-        }
+        #endregion
     }
 }
